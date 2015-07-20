@@ -1,0 +1,24 @@
+{
+    "name": "staf/suggestion-box",
+    "description": "Simple but efficient suggestion box.",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Linus Staf",
+            "email": "email@linusstaf.com"
+        }
+    ],
+    "require": {
+        "predis/predis": "^1.0",
+        "symfony/http-foundation": "^2.7"
+    },
+    "autoload": {
+      "psr-4": {
+        "Staf\\": "app/"
+      },
+      "files" : [
+        "app/Helpers.php"
+      ]
+    }
+}
