@@ -1,10 +1,11 @@
 <?php
 namespace Staf\Core;
 
-
+use Staf\Core\ApiHandler;
 use Symfony\Component\HttpFoundation\Request;
 
-class Application {
+class Application
+{
 
     protected $request;
 
@@ -18,10 +19,10 @@ class Application {
         $uri = $this->request->getRequestUri();
         if ($uri == '/')  {
             $this->startWeb();
-        } elseif (substr($uri, 0, 4) == '/api') {
+        } elseif (substr($uri, 0, 5) == '/api/' and strlen($uri) > 5) {
             $this->startApi();
         } else {
-            echo 'Wrong';
+            $this->send404();
         }
     }
 
@@ -32,6 +33,12 @@ class Application {
 
     private function startApi()
     {
-        echo 'Starting API';
+        $api = new ApiHandler($this->request);
+        $api->handle();
+    }
+
+    private function send404()
+    {
+        include resource_path('/views/error.php');
     }
 }

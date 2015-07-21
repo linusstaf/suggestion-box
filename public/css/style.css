@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:400,300,700);
+html, body {
+  box-sizing: border-box; }
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  padding: 10px 0 15px; }
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #181818;
+  background: #FFF; }
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%; }
+  @media screen and (min-width: 1000px) {
+    .container {
+      padding: 0;
+      max-width: 960px; } }
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1140px; } }
+
+.header {
+  padding: 50px 0 20px;
+  background: #ecf0f1;
+  border-bottom: 1px solid #dde4e6; }
+
+.site-name {
+  font-size: 2.5em; }
+  @media screen and (min-width: 768px) {
+    .site-name {
+      font-size: 3em; } }
+  @media screen and (min-width: 1000px) {
+    .site-name {
+      font-size: 4em; } }
+  @media screen and (min-width: 1200px) {
+    .site-name {
+      font-size: 5em; } }
+
+.main {
+  padding: 50px 0; }
+
+.main__nav {
+  margin-bottom: 40px;
+  padding: 15px 0 0; }
+
+.footer {
+  padding: 50px 0;
+  color: #ecf0f1;
+  background: #2c3e50; }
+  .footer h2 {
+    color: #ecf0f1;
+    margin-bottom: 50px; }
+
+input {
+  padding: 12px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  width: 100%; }

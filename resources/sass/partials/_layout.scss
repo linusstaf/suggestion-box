@@ -1,0 +1,13 @@
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+
+  @include bp($bp-medium) {
+    padding: 0;
+    max-width: $container-medium;
+  }
+  @include bp($bp-large) {
+    max-width: $container-large;
+  }
+}

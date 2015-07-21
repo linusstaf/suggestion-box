@@ -1,0 +1,42 @@
+// Import fonts
+@import url(http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:400,300,700);
+
+// Set fonts
+$open-sans: 'Open Sans', sans-serif;
+$lato: 'Lato', sans-serif;
+$main-font: $open-sans;
+$header-font: $lato;
+
+
+// Flat UI colors
+$turqoise: #1abc9c;
+$greensea: #16a085;
+$emerland: #2ecc71;
+$nephritis: #27ae60;
+$peterriver: #3498db;
+$belizehole: #2980b9;
+$amethyst: #9b59b6;
+$wistera: #8e44ad;
+$wetasphalt: #34495e;
+$midnightblue: #2c3e50;
+$sunflower: #f1c40f;
+$orange: #f39c12;
+$carrot: #e67e22;
+$pumpkin: #d35400;
+$alizarin: #e74c3c;
+$pomegranate: #c0392b;
+$clouds: #ecf0f1;
+$silver: #bdc3c7;
+$concrete: #95a5a6;
+$asbestos: #7f8c8d;
+
+
+// Breakpoints
+$bp-small: 768px;
+$bp-medium: 1000px;
+$bp-large: 1200px;
+
+// Container widths
+$container-large: 1140px;
+$container-medium: 960px;
+
