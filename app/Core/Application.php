@@ -14,31 +14,44 @@ class Application
         $this->request = Request::createFromGlobals();
     }
 
+    /**
+     * Return the correct response depending on the request.
+     * Either launch the API layer or render the start/error pages,
+     */
     public function start()
     {
         $uri = $this->request->getRequestUri();
-        if ($uri == '/')  {
-            $this->startWeb();
-        } elseif (substr($uri, 0, 5) == '/api/' and strlen($uri) > 5) {
+        if (strlen($uri) > 5 and substr($uri, 0, 5) == '/api/')  {
             $this->startApi();
+        } elseif ($uri == '/') {
+            $this->renderHome();
         } else {
-            $this->send404();
+            $this->render404();
         }
     }
 
-    private function startWeb()
+    /**
+     * Render the static page.
+     */
+    private function renderHome()
     {
         include resource_path('/views/home.php');
     }
 
+    /**
+     * Render the 404 page for any unknown requests
+     */
+    private function render404()
+    {
+        include resource_path('/views/error.php');
+    }
+
+    /**
+     * Launch the API to handle the AJAX requests
+     */
     private function startApi()
     {
         $api = new ApiHandler($this->request);
         $api->handle();
-    }
-
-    private function send404()
-    {
-        include resource_path('/views/error.php');
     }
 }

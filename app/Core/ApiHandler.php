@@ -32,7 +32,7 @@ class ApiHandler {
 
     public function handle()
     {
-        
+
     }
 
 }
